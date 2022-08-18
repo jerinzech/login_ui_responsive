@@ -26,8 +26,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                     height: height * 0.2,
                     child: Container(
-                      color: Colors.amber,
-                    )),
+                        // color: Colors.amber,
+                        )),
                 SizedBox(
                     height: height * 0.6,
                     width: width,
@@ -37,7 +37,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: [
                         Container(
                           width: width,
-                          padding: EdgeInsets.fromLTRB(width * 0.05, 20, 0, 10),
+                          padding: EdgeInsets.fromLTRB(
+                              width * 0.05, 20, width * 0.05, 10),
                           color: Colors.pink,
                           child: RichText(
                               text: TextSpan(children: [
@@ -59,7 +60,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Container(
                           width: width,
-                          padding: EdgeInsets.fromLTRB(width * 0.05, 10, 0, 20),
+                          padding: EdgeInsets.fromLTRB(
+                              width * 0.05, 10, width * 0.05, 20),
                           color: Colors.pink,
                           child: RichText(
                             text: TextSpan(
@@ -74,22 +76,67 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Container(
                             width: width,
-                            padding:
-                                EdgeInsets.fromLTRB(width * 0.05, 40, 0, 0),
-                            color: Colors.green,
+                            padding: EdgeInsets.fromLTRB(
+                                width * 0.05, 20, width * 0.05, 0),
+                            // color: Colors.green,
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                SizedBox(
+                                    height: 10.0,
+                                    child: Container(
+                                        // color: Colors.amber,
+                                        )),
                                 Text(
                                   "Email",
                                   style: ralewayStyle.copyWith(
-                                      color: AppColors.blueDarkColor),
+                                      fontSize: 12.0,
+                                      color: AppColors.blueDarkColor,
+                                      fontWeight: FontWeight.w700),
                                 ),
-                                Text("Email"),
-                                Text("Email"),
-                                Text("Email"),
-                                Text("Email"),
+                                SizedBox(
+                                    height: 10.0,
+                                    child: Container(
+                                        // color: Colors.amber,
+                                        )),
+                                Container(
+                                  width: width,
+                                  // color: Colors.blue,
+                                  child: TextFormField(
+                                    decoration: const InputDecoration(
+                                      labelText: 'Enter your email address',
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  "Password",
+                                  style: ralewayStyle.copyWith(
+                                      fontSize: 12.0,
+                                      color: AppColors.blueDarkColor,
+                                      fontWeight: FontWeight.w700),
+                                ),
+                                SizedBox(
+                                    height: 10.0,
+                                    child: Container(
+                                        // color: Colors.amber,
+                                        )),
+                                Container(
+                                  width: width,
+                                  // color: Colors.blue,
+                                  child: TextFormField(
+                                    obscureText: true,
+                                    decoration: const InputDecoration(
+                                      labelText: 'Enter your password',
+                                      border: OutlineInputBorder(),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                    height: 10.0,
+                                    child: Container(
+                                        // color: Colors.amber,
+                                        )),
                               ],
                             )),
                       ],
@@ -97,8 +144,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                     height: height * 0.2,
                     child: Container(
-                      color: Colors.amber,
-                    )),
+                        // color: Colors.amber,
+                        )),
               ],
             )));
   }
